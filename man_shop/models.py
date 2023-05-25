@@ -24,6 +24,7 @@ class Shop(models.Model):
     production = models.CharField('Производство: ', max_length=50)
     material = models.CharField('Материал: ', max_length=100, default='Хлопок')
     brand = models.CharField('Бренд:', max_length=100, choices=BRAND)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
 
 
     def __str__(self):
