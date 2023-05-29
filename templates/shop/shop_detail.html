@@ -15,6 +15,12 @@
     <h3><b>{{product_id.brand}}</b></h3>
     <button><a href="/product_detail/{{product_id.id}}/delete">удалить</a></button>
     <button><a href="/product_detail/{{product_id.id}}/update">Редактировать</a></button>
+
+  {% for i in product_id.comment_object.all %}
+  <h1>{{i.description }}</h1>
+  <h3>{{i.created_at}}</h3>
+  <br><br><br>
+  {% endfor %}
 </center>
 </body>
 </html>

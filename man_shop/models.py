@@ -29,3 +29,15 @@ class Shop(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Reviews(models.Model):
+    name_reviews = models.ForeignKey(Shop, on_delete=models.CASCADE,
+                                     related_name='comment_object')
+    description = models.TextField('Ваш отзыв:')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.description
+
+

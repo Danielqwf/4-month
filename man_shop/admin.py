@@ -3,3 +3,4 @@ from . import models
 
 
 admin.site.register(models.Shop)
+admin.site.register(models.Reviews)
