@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Shop Detail</title>
-</head>
-<body>
+{% include 'shop/header.html' %}
 <center>
+  <br><br>
   <img src="product_id.image.url" alt="" width="400" height="400">
   <h1>{{product_id.name}}</h1>
   <h4>{{product_id.color}}</h4>
@@ -22,5 +17,4 @@
   <br><br><br>
   {% endfor %}
 </center>
-</body>
-</html>
+{% include 'shop/footer.html' %}
