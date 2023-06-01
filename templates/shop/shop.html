@@ -1,8 +1,7 @@
 {% include 'shop/header.html' %}
-
 <center>
 <h1><b>Мужские одежды</b></h1>
-  {% for i in products %}
+  {% for i in object_list %}
   <h3>{{i.name}}</h3>
   <img src="{{i.image.url}}" width="300" height="300">
 
@@ -21,5 +20,3 @@
 </html>
 
 {% include 'shop/footer.html' %}
-<!--<button><a href="/product_detail/{{i.id}}">Подробнее</a></button>-->
-<!--<button><a href="/add-goods/">Добавить товар</a></button>-->

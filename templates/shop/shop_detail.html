@@ -1,17 +1,17 @@
 {% include 'shop/header.html' %}
 <center>
   <br><br>
-  <img src="product_id.image.url" alt="" width="400" height="400">
-  <h1>{{product_id.name}}</h1>
-  <h4>{{product_id.color}}</h4>
-  <h2>{{product_id.prise}}</h2>
-  <p>{{product_id.production}}</p>
-  <h5><b>{{product_id.material}}</b></h5>
-    <h3><b>{{product_id.brand}}</b></h3>
-    <button><a href="/product_detail/{{product_id.id}}/delete">удалить</a></button>
-    <button><a href="/product_detail/{{product_id.id}}/update">Редактировать</a></button>
+  <img src=object.image.url" alt="" width="400" height="400">
+  <h1>{{object.name}}</h1>
+  <h4>{{object.color}}</h4>
+  <h2>{{object.prise}}</h2>
+  <p>{{object.production}}</p>
+  <h5><b>{{object.material}}</b></h5>
+    <h3><b>{{object.brand}}</b></h3>
+    <button><a href="/product_detail/{{object.id}}/delete">удалить</a></button>
+    <button><a href="/product_detail/{{object.id}}/update">Редактировать</a></button>
 
-  {% for i in product_id.comment_object.all %}
+  {% for i in object.comment_object.all %}
   <h1>{{i.description }}</h1>
   <h3>{{i.created_at}}</h3>
   <br><br><br>
