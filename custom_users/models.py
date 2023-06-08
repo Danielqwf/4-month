@@ -16,7 +16,7 @@ class CustomUsers(User):
     phone_number = models.CharField(max_length=13, default='+996')
     age = models.PositiveIntegerField(default=16)
     gender = models.CharField(max_length=3, choices=GENDER)
-    work = models.TextField(blank=True)
+    work = models.TextField(blank=True, null=True)
 
 
     def __str__(self):
